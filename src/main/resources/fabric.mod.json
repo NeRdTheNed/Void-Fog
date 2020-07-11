@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "worsevoidfog",
   "version": "${version}",
-  "name": "Void Fog but worse",
+  "name": "Worse Void Fog",
   "description": "Doesn't bring back the old Void Fog. Only does the particles.",
   "authors": [
     "Tamaized", "Sollace", "NeRd"

@@ -17,11 +17,11 @@ public class Settings {
 
 	public boolean enabled = true;
 
-	public boolean disableInCreative = true;
+	public boolean disableInCreative = false;
 
-	public boolean respectTorches = true;
+	public boolean respectTorches = false;
 
-	public int voidParticleDensity = 200;
+	public int voidParticleDensity = 400;
 
 	public boolean imABigBoi = false;
 
@@ -30,8 +30,8 @@ public class Settings {
 	public float setParticleDensity(float density) {
 	    density = density > 9997 ? 10000 : density < 3 ? 0 : density;
 
-	    if (Math.abs(density - 1000) < 30) {
-	        density = 1000;
+	    if (Math.abs(density - 400) < 30) {
+	        density = 400;
 	    }
 
 	    voidParticleDensity = (int)density;

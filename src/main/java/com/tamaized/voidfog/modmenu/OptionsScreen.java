@@ -47,13 +47,14 @@ class OptionsScreen extends GameGui {
             .getStyle()
                 .setText("menu.voidfog.creative");
 
-        addButton(new Toggle(left, row += 25, config.respectTorches))
-            .onChange(enabled -> config.respectTorches = enabled)
-            .getStyle()
-                .setText("menu.voidfog.torches");
-
         addButton(new Toggle(left, row += 25, pointless.pointless))
             .onChange(enabled -> pointless.pointless = enabled)
+            .getStyle()
+                .setTooltip("menu.voidfog.torches.tooltip")
+                .setText("menu.voidfog.torches");
+
+        addButton(new Toggle(left, row += 25, pointless.pointlesser))
+            .onChange(enabled -> pointless.pointlesser = enabled)
             .getStyle()
                 .setTooltip("menu.voidfog.bigboi.tooltip")
                 .setText("menu.voidfog.bigboi");
@@ -86,7 +87,7 @@ class OptionsScreen extends GameGui {
             return "menu.voidfog.particles.max";
         }
 
-        if (value == 1000) {
+        if (value == 400) {
             return "menu.voidfog.particles.default";
         }
 

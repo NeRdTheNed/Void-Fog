@@ -16,6 +16,7 @@ public class PointlessButtonSettings {
             .create();
 	
 	public boolean pointless = false;
+	public boolean pointlesser = false;
 	
 	private transient Path path;
 
