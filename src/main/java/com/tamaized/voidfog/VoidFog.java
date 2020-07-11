@@ -13,14 +13,16 @@ public class VoidFog implements ClientModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("voidfog");
 
 	public static final FogParticleSpawner particleSpawner = new FogParticleSpawner();
-	public static final FogColor fogColor = new FogColor();
-	public static final FogRenderer renderer = new FogRenderer();
+	//public static final FogColor fogColor = new FogColor();
+	//public static final FogRenderer renderer = new FogRenderer();
 
 	public static Settings config = new Settings();
+	public static PointlessButtonSettings pointlessButton = new PointlessButtonSettings();
 
     @Override
     public void onInitializeClient() {
         config = Settings.load(FabricLoader.getInstance().getConfigDirectory().toPath().resolve("voidfog.json"));
+        pointlessButton = PointlessButtonSettings.load(FabricLoader.getInstance().getConfigDirectory().toPath().resolve("pointless.json"));
         ClientTickCallback.EVENT.register(this::onTick);
     }
 
@@ -29,9 +31,9 @@ public class VoidFog implements ClientModInitializer {
             if (config.enabled) {
                 particleSpawner.update(client.world, client.getCameraEntity());
 
-                if (config.imABigBoi) {
+                /**if (config.imABigBoi) {
                     particleSpawner.updateBigBoi(client.world, client.getCameraEntity());
-                }
+                }**/
             }
         }
     }

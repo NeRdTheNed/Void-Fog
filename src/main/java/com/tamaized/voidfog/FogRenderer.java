@@ -1,6 +1,6 @@
 package com.tamaized.voidfog;
 
-import com.mojang.blaze3d.platform.GlStateManager;
+/**import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.tamaized.voidfog.api.Voidable;
 
@@ -10,13 +10,15 @@ import net.minecraft.client.render.BackgroundRenderer.FogType;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.LightType;
-import net.minecraft.world.World;
+import net.minecraft.world.World;**/
 
 public class FogRenderer {
+	
+	//MinecraftClient clientInstance = MinecraftClient.getInstance();
 
-    private float lastFogDistance = 1000;
+    //private float lastFogDistance = 1000;
 
-    public void render(Camera camera,  FogType type, float viewDistance, boolean thickFog) {
+    /**public void render(Camera camera,  FogType type, float viewDistance, boolean thickFog) {
 
         if (!VoidFog.config.enabled) {
             return;
@@ -51,9 +53,11 @@ public class FogRenderer {
         RenderSystem.enableColorMaterial();
         RenderSystem.enableFog();
         RenderSystem.colorMaterial(1028, 4608);
-    }
+        
+    	return;
+    }**/
 
-    private int getLightLevelU(Entity entity) {
+    /**private int getLightLevelU(Entity entity) {
         if (VoidFog.config.respectTorches) {
             return entity.world.getLightLevel(entity.getBlockPos());
         }
@@ -69,6 +73,7 @@ public class FogRenderer {
 
         float viewDistance = MinecraftClient.getInstance().gameRenderer.getViewDistance();
         double maxHeight = 32 * (world.getDifficulty().getId() + 1);
+        //double maxHeight = 4;
         double fogDistance = getLightLevelU(entity) / 16D
                            + getLightLevelV(voidable, world, entity) / maxHeight;
 
@@ -98,5 +103,5 @@ public class FogRenderer {
         }
 
         return intensity;
-    }
+    }**/
 }

@@ -10,7 +10,7 @@ public class VFModMenuFactory implements ModMenuApi {
 
     @Override
     public String getModId() {
-        return "voidfog";
+        return "worsevoidfog";
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.tamaized.voidfog.mixin;
 
-import org.spongepowered.asm.mixin.Mixin;
+/**import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -12,11 +12,11 @@ import com.tamaized.voidfog.VoidFog;
 import net.minecraft.client.render.BackgroundRenderer;
 import net.minecraft.client.render.BackgroundRenderer.FogType;
 import net.minecraft.client.render.Camera;
-import net.minecraft.client.world.ClientWorld;
+import net.minecraft.client.world.ClientWorld;**/
 
-@Mixin(BackgroundRenderer.class)
+//@Mixin(BackgroundRenderer.class)
 abstract class MixinBackgroundRenderer {
-
+/**
     @Shadow
     private static float red;
     @Shadow
@@ -53,4 +53,5 @@ abstract class MixinBackgroundRenderer {
         blue *= factor;
         RenderSystem.clearColor(red, green, blue, 0);
     }
+    **/
 }

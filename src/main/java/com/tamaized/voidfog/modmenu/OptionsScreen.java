@@ -7,6 +7,7 @@ import com.minelittlepony.common.client.gui.element.Button;
 import com.minelittlepony.common.client.gui.element.Label;
 import com.minelittlepony.common.client.gui.element.Slider;
 import com.minelittlepony.common.client.gui.element.Toggle;
+import com.tamaized.voidfog.PointlessButtonSettings;
 import com.tamaized.voidfog.Settings;
 import com.tamaized.voidfog.VoidFog;
 
@@ -16,7 +17,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.TranslatableText;
 
 class OptionsScreen extends GameGui {
-
+	
     public OptionsScreen(@Nullable Screen parent) {
         super(new TranslatableText("menu.voidfog.title"), parent);
     }
@@ -27,6 +28,7 @@ class OptionsScreen extends GameGui {
         int row = height / 4 - 24;
 
         Settings config = VoidFog.config;
+        PointlessButtonSettings pointless = VoidFog.pointlessButton;
 
         addButton(new Label(width / 2, 30)).setCentered().getStyle()
                 .setText(getTitle().asString());
@@ -50,8 +52,8 @@ class OptionsScreen extends GameGui {
             .getStyle()
                 .setText("menu.voidfog.torches");
 
-        addButton(new Toggle(left, row += 25, config.imABigBoi))
-            .onChange(enabled -> config.imABigBoi = enabled)
+        addButton(new Toggle(left, row += 25, pointless.pointless))
+            .onChange(enabled -> pointless.pointless = enabled)
             .getStyle()
                 .setTooltip("menu.voidfog.bigboi.tooltip")
                 .setText("menu.voidfog.bigboi");
@@ -71,6 +73,7 @@ class OptionsScreen extends GameGui {
     @Override
     public void onClose() {
         VoidFog.config.save();
+        VoidFog.pointlessButton.save();
         super.onClose();
     }
 

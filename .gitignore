@@ -13,3 +13,4 @@ logs/
 *.iml
 classes/
 out/
+*.DS_Store

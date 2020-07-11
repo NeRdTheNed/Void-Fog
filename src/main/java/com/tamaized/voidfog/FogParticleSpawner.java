@@ -5,12 +5,12 @@ import java.util.Random;
 import com.tamaized.voidfog.api.Voidable;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.client.MinecraftClient;
+//import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
+//import net.minecraft.sound.SoundCategory;
+//import net.minecraft.sound.SoundEvent;
+//import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -18,7 +18,7 @@ public class FogParticleSpawner {
 
     private static final int RADIUS = 16;
 
-    private int timeToNextSound = 0;
+    /**private int timeToNextSound = 0;
     private int insanity;
 
     private final SoundEvent[] events = new SoundEvent[] {
@@ -31,7 +31,7 @@ public class FogParticleSpawner {
             SoundEvents.BLOCK_COMPOSTER_READY,
             SoundEvents.BLOCK_METAL_STEP,
             SoundEvents.UI_BUTTON_CLICK
-    };
+    };**/
 
     private BlockPos randomPos(Random rand) {
         return new BlockPos(rand.nextInt(RADIUS), rand.nextInt(RADIUS), rand.nextInt(RADIUS));
@@ -66,7 +66,7 @@ public class FogParticleSpawner {
         }
     }
 
-    public void updateBigBoi(World world, Entity entity) {
+    /**public void updateBigBoi(World world, Entity entity) {
 
         Voidable voidable = (Voidable)world.getDimension();
 
@@ -101,7 +101,7 @@ public class FogParticleSpawner {
         SoundEvent event = events[world.random.nextInt(events.length)];
         float pitch = 1 + world.random.nextFloat();
         world.playSound(MinecraftClient.getInstance().player, pos, event, SoundCategory.AMBIENT, 2, pitch);
-    }
+    }**/
 }
 
 

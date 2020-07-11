@@ -21,7 +21,7 @@ public class Settings {
 
 	public boolean respectTorches = true;
 
-	public int voidParticleDensity = 1000;
+	public int voidParticleDensity = 200;
 
 	public boolean imABigBoi = false;
 

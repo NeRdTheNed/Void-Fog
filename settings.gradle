@@ -8,4 +8,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'Void-Fog'
+rootProject.name = 'Worse-Void-Fog'

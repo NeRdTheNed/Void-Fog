@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "voidfog",
+  "id": "worsevoidfog",
   "version": "${version}",
-  "name": "Void Fog",
-  "description": "Brings back the old Void Fog.",
+  "name": "Void Fog but worse",
+  "description": "Doesn't bring back the old Void Fog. Only does the particles.",
   "authors": [
-    "Tamaized", "Sollace"
+    "Tamaized", "Sollace", "NeRd"
   ],
   "contact": {},
   "license": "MIT",
